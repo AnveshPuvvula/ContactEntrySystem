@@ -38,10 +38,10 @@ namespace ContactsTest
         {
             // Address for all test cases.
             Address addressTest = new Address();
-            addressTest.city = "TEST_CITY";
-            addressTest.state = "TEST_STATE";
-            addressTest.street = "TEST_STREET";
-            addressTest.zip = "TEST_ZIP";
+            addressTest.city = "CityTest";
+            addressTest.state = "StateTest";
+            addressTest.street = "StreetTest";
+            addressTest.zip = "ZipTest";
 
             // Test case 1------------------------------------------------------------------------------------------------------------------------
             nameTest1 = new Name { first = "FirstNameTest1", last = "LastNameTest1", middle = "MiddleNameTest1" };
