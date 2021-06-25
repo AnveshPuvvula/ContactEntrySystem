@@ -48,7 +48,7 @@ namespace ContactsTest
 
             contactTest1 = new Contact { address = addressTest, name = nameTest1, id = 1234L, email = "EmailTest1" };
 
-            List<Phone> phoneListTest1 = new();
+            List<Phone> phoneListTest1 = new List<Phone>();
             Phone phoneTest1 = new Phone
             {
                 ID = 1234,
@@ -68,7 +68,7 @@ namespace ContactsTest
             contactTest2 = new Contact { address = addressTest, name = nameTest2, id = 5678L, email = "EmailTest2" };
 
 
-            List<Phone> phoneListTest2 = new();
+            List<Phone> phoneListTest2 = new List<Phone>();
             Phone phoneTest2 = new Phone
             {
                 //phoneTest1.(contactTest2);
@@ -91,7 +91,7 @@ namespace ContactsTest
             contactTest3 = new Contact { address = addressTest, name = nameTest3, id = 9012L, email = "EmailTest3" };
 
 
-            List<Phone> phoneListTest3 = new();
+            List<Phone> phoneListTest3 = new List<Phone>();
             Phone phoneTest3 = new Phone
             {
                 //phoneTest1.(contactTest2);
