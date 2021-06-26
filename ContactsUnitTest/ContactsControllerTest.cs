@@ -1,13 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using ContactEntrySystem.Controllers;
+﻿using ContactEntrySystem.Controllers;
 using ContactEntrySystem.DataAccess;
 using ContactEntrySystem.Models;
-using Moq;
 using Newtonsoft.Json;
 using NUnit.Framework;
+using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace ContactsTest
+namespace ContactsUnitTest
 {
     [TestFixture]
     class ContactsControllerTest
@@ -24,10 +27,10 @@ namespace ContactsTest
         private List<Contact> contactListTest = new List<Contact>();
 
         //Declaring and initializing the path where the database for unit tests are stored.
-        private static string dbpath = "C:/temp/ContactsTest.db";
+        private static string dbpath = ConfigurationManager.AppSettings["dbpath"];
 
         //Creating and assigning the controller object used for the test cases.
-        private ContactsController contactsController = new ContactsController(new ContactDB(), dbpath);
+        private ContactsController contactsController = new ContactsController(new ContactDB());
 
 
 

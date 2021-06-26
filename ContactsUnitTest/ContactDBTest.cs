@@ -1,16 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using ContactEntrySystem.Controllers;
-using ContactEntrySystem.DataAccess;
+﻿using ContactEntrySystem.DataAccess;
 using ContactEntrySystem.Models;
-using Moq;
 using Newtonsoft.Json;
 using NUnit.Framework;
+using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace ContactsTest
+namespace ContactsUnitTest
 {
-    [TestFixture,NonParallelizable]
+    [TestFixture, NonParallelizable]
     public class ContactDBTest
     {
         // Test objects declaration.
@@ -25,12 +26,12 @@ namespace ContactsTest
         private List<Contact> contactListTest = new List<Contact>();
 
         //Declaring and initializing the path where the database for unit tests are stored.
-        private static string dbpath = "C:/temp/ContactsTest.db";
-        
+        private static string dbpath = ConfigurationManager.AppSettings["dbpath"];
+
         //Creating and assigning the controller object used for the test cases.
         private IContactDB contactDB = new ContactDB();
 
-     
+
 
         //Setup method to set the test object values for running the tests.
         [SetUp]
@@ -61,7 +62,7 @@ namespace ContactsTest
 
             // Adding test case 1 to contact list.
             contactListTest.Add(contactTest1);
-            
+
             // Test case 2 ------------------------------------------------------------------------------------------------------------------------
             nameTest2 = new Name { first = "FirstNameTest2", last = "LastNameTest2", middle = "MiddleNameTest2" };
 
@@ -133,13 +134,13 @@ namespace ContactsTest
             string actual = JsonConvert.SerializeObject(result);
             string expected = JsonConvert.SerializeObject(contactTest1);
             Assert.AreEqual(expected, actual);
-            
+
         }
 
         [Test, NonParallelizable]
         public void TestGetAllContacts()
         {
-            
+
             List<Contact> result = contactDB.GetAllContacts();
             string actual = JsonConvert.SerializeObject(result[0]);
             string expected = JsonConvert.SerializeObject(contactListTest[0]);

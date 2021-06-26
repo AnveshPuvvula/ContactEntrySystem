@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31025.194
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactEntrySystem", "ContactEntrySystem\ContactEntrySystem.csproj", "{3F810990-DCCF-456A-AEB3-737BFE00A756}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContactsTest", "ContactsTest\ContactsTest.csproj", "{423D97A3-753A-4633-B8D2-6B71C46E4884}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactsUnitTest", "ContactsUnitTest\ContactsUnitTest.csproj", "{F2280038-E9B0-46FB-A8A7-61E9C63DCD6C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{3F810990-DCCF-456A-AEB3-737BFE00A756}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F810990-DCCF-456A-AEB3-737BFE00A756}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F810990-DCCF-456A-AEB3-737BFE00A756}.Release|Any CPU.Build.0 = Release|Any CPU
-		{423D97A3-753A-4633-B8D2-6B71C46E4884}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{423D97A3-753A-4633-B8D2-6B71C46E4884}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{423D97A3-753A-4633-B8D2-6B71C46E4884}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{423D97A3-753A-4633-B8D2-6B71C46E4884}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2280038-E9B0-46FB-A8A7-61E9C63DCD6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2280038-E9B0-46FB-A8A7-61E9C63DCD6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2280038-E9B0-46FB-A8A7-61E9C63DCD6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2280038-E9B0-46FB-A8A7-61E9C63DCD6C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

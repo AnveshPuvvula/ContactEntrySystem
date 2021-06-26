@@ -15,16 +15,14 @@ namespace ContactEntrySystem.Controllers
         private IContactDB _DbContext;
 
         //Constructor used to inject dependency using the microsoft unity container.
-        public ContactsController(IContactDB iContactDB, string path = null)
+        public ContactsController(IContactDB iContactDB)
         {
             // initializing the data access class to perform required actions on the database.
             _DbContext = iContactDB;
             
             // setting the dbpath property in the data access class which is used to create and connect to the database.
             if (!(ConfigurationManager.AppSettings["dbpath"] == null))
-                _DbContext.InitializeDB(ConfigurationManager.AppSettings["dbpath"]);
-            else
-                _DbContext.InitializeDB(path);
+                _DbContext.InitializeDB(ConfigurationManager.AppSettings["dbpath"]);          
            
         }
 
