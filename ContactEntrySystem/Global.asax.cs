@@ -1,5 +1,7 @@
-﻿using System;
+﻿using ContactEntrySystem.DataAccess;
+using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
@@ -19,6 +21,10 @@ namespace ContactEntrySystem
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             //UnityConfig.RegisterComponents();
+
+            //Drop DB on app initialization.
+            IContactDB contactDB = new ContactDB();
+            contactDB.DropDatabase(ConfigurationManager.AppSettings["dbpath"], "contacts");
         }
     }
 }
